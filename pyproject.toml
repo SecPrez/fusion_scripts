@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fusion-cam"
+version = "0.1.0"
+description = "Query Fusion 360 CAM setup and operation data via a bridge add-in"
+requires-python = ">=3.9"
+dependencies = ["PySide6"]
+
+[project.scripts]
+fusion-cam = "fusion_cam.cli:main"
+fusion-cam-gui = "fusion_cam.gui:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
